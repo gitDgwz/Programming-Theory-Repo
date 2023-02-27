@@ -7,7 +7,10 @@ public class CameraScript : MonoBehaviour
 {
 
     Vector2 lookDirection;
+    
     public GameObject player;
+    
+    
 
     public void LookDireaction(InputAction.CallbackContext callback)
     {
@@ -25,6 +28,7 @@ public class CameraScript : MonoBehaviour
     }
     private void Look()
     {
+        
         transform.Rotate(new Vector3(-lookDirection.y,0 , 0),Space.Self);
         player.transform.Rotate(0, lookDirection.x, 0);
     }

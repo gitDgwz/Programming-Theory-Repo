@@ -6,6 +6,9 @@ public class Planet : Star
 {
 
     public float revolutionSpeed;
+    
+
+
 
 
 

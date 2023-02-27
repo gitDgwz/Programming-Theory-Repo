@@ -4,13 +4,25 @@ using UnityEngine;
 
 public abstract class  Star : MonoBehaviour
 {
-   
-    public float ratateSpeed;
+    
+    public float rotateSpeed;
+    public float RotateSpped
+    {
+        get {
+            if (rotateSpeed == 0)
+            {
+                return -10;
+            }
+            return rotateSpeed;
+        }
+       
+    }
+    
 
 
     protected virtual void ratation()
     {
-        transform.Rotate(0, ratateSpeed * Time.deltaTime, 0);
+        transform.Rotate(0, RotateSpped * Time.deltaTime, 0);
     }
 
 
